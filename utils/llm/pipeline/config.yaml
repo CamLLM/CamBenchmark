@@ -47,13 +47,13 @@ model:
   - name: "api_model"
     type: "api"
     model_name: "gpt-4"
-    api_url: "https://api.360.cn/v1/chat/completions"
-    api_key: "fk3140818362.tusguAmt1NeUlgV7eCGkEBjdw2B0wNGp4761e6cc"
+    api_url: ""
+    api_key: ""
 
 evaluation_api:
   model_name: "gpt-4"
-  api_url: "https://api.360.cn/v1/chat/completions" 
-  api_key: "fk3140818362.tusguAmt1NeUlgV7eCGkEBjdw2B0wNGp4761e6cc"
+  api_url: ""
+  api_key: ""
   
 generation_params:
   max_tokens: 5000
