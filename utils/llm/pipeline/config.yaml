@@ -1,0 +1,64 @@
+data:
+  multiple_choice:
+    type: excel
+    file_path: "../各机型考试题库(非常重要！) (version 2).xls"
+    sheet_name: "A320AV"
+  extracted_entries:
+    type: jsonl
+    file_path: "../evaluation/0_gold_label.json"
+  scoring:
+    type: json 
+    file_path: "../evaluation/冬季北方（提取后两项）.json"
+
+prompt:
+    multiple_choice:
+      type: multiple_choice
+      question_column: '试题题目'
+      choices_columns: ['选项A', '选项B', '选项C', '选项D']
+    
+    scoring:
+      type: scoring
+      knowledge_base: "../evaluation/冬季北方（提取后）.json" 
+      query_column: "故障现象"
+      solution_column: "处理措施"
+
+    extracted_entries:
+      type: extracted_entries
+      query_column: query
+      entries_source: 
+        type: jsonl
+        file_path: ../evaluation/extract_title/fim_21_documents.json
+      entry_column: txt
+
+evaluation:
+  multiple_choice:
+    answer_column: 答案
+  extracted_entries:
+    answer_column: golds_label
+  scoring:
+    answer_column: 处理措施
+
+model:
+  - name: "local_model"
+    type: "local"
+    model_name: "../../pcj-backup/models/Qwen3-30B-A3B/Qwen/Qwen3-30B-A3B"   
+    tensor_parallel_size: 2
+
+  - name: "api_model"
+    type: "api"
+    model_name: "gpt-4"
+    api_url: "https://api.360.cn/v1/chat/completions"
+    api_key: "fk3140818362.tusguAmt1NeUlgV7eCGkEBjdw2B0wNGp4761e6cc"
+
+evaluation_api:
+  model_name: "gpt-4"
+  api_url: "https://api.360.cn/v1/chat/completions" 
+  api_key: "fk3140818362.tusguAmt1NeUlgV7eCGkEBjdw2B0wNGp4761e6cc"
+  
+generation_params:
+  max_tokens: 5000
+  temperature: 0.001
+  enable_thinking: True
+
+output:
+  output_dir: ../../pcj-backup/workdesk/pipeline
