@@ -68,7 +68,7 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 ## 评估数据集
 除了此项目外，您也可以通过[Hugging Face]()或者[ModelScope]()获取我们的数据。
 
-#### 数据集说明
+### 数据集说明
 
 * [chineseEnglishAligned](chineseEnglishAligned)
     * [bitextmine.xlsx](chineseEnglishAligned/bitextmine.xlsx)，[更多信息](chineseEnglishAligned/readme.md)
@@ -180,11 +180,11 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
             
         </details>
 
-#### 提示词(prompt)
+### 提示词(prompt)
 
 请参考[paper]()的附录B(Prompts)部分
 
-#### 评估脚本及Pipeline
+### 评估脚本及Pipeline
 > **Note：**
 > 各个任务在 Embedding 和 LLM 下的评估脚本，包括评估指标等，请分别查看对应目录对应模型类别的脚本，如 chineseEnglishAligned 任务 embedding 模型的 [bitextmine.py](chineseEnglishAligned/embedding/bitextmine.py)
 
