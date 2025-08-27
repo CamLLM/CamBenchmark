@@ -20,14 +20,30 @@
 
 <p align="center"> <img src="images/camb.png" style="width: 85%;" id="title-icon">       </p>
 
+## 评测任务
+
 CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评估数据集：
 * 民航术语双语对齐(Alignment bilingual terminology)
+    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
+    * 对于 LLM，构建为中英翻译(Translation)任务
 * 民航故障系统定位(Aircraft fault system location)
+    * 对于 Embedding 模型，利用“民航飞行器一级系统”向量重排(Rerank)构建为分类(Classification)任务
+    * 对于 LLM，利用 prompt 构建为分类(Classification)任务
 * 民航文本系统章节定位(Aircraft text chapter location)
+    * 对于 Embedding 模型，利用“章节系统”向量重排(Rerank)构建为聚类(Cluster)任务
+    * 对于 LLM，构建为文本分类(Classification)任务
 * 民航维修知识问答(Civil aviation maintenance QA)
+    * 对于 Embedding 模型，分别构建为任务
+    * 对于 LLM，构建为中英翻译(Translation)任务
 * 民航维修执业资格及上岗考试(Civil aviation maintenance Multiple choice)
+    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
+    * 对于 LLM，构建为中英翻译(Translation)任务
 * 故障描述与FIM手册排故条目匹配(Fault description and FIM manual match)
-* Troubleshooting tree-structured QA 
+    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
+    * 对于 LLM，构建为中英翻译(Translation)任务
+* 民航排故树推理问答(Troubleshooting tree-structured QA)
+    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
+    * 对于 LLM，构建为中英翻译(Translation)任务
 
 ## 评测结果
 
