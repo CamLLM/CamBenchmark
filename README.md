@@ -9,19 +9,23 @@
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 📄 <a href="" target="_blank" style="margin-right: 15px; margin-left: 10px">论文</a> • 
-🏆 <a href="" target="_blank"  style="margin-left: 10px">排行榜</a> •
+🏆 <a href="" target="_blank"  style="margin-left: 10px">评测结果</a> •
 🤗 <a href="" target="_blank" style="margin-left: 10px">数据集</a> 
 </p>
 
 
 ## 简介
 
-pass
+民航维修领域，行业标准严苛，知识密集，典型的富含知识和推理的业务场景。我们结合民航维修领域的业务和对大模型的理解，建设并开源了一套民航维修领域工业级的大模型评测基准(Civil Aviation Maintenance Benchmark)，也在一定程度上弥补了目前大多仅在数学和代码领域研究大模型推理的评测短板。
+
+基于检索增强生成系统(RAG)，利用此基准评测了常用的向量嵌入模型(Embedding)和大语言模型(LLM)，并进行了一定的实验探索和分析。
+
+
 
 <p align="center"> <img src="images/camb.png" style="width: 85%;" id="title-icon">       </p>
 
 
-## 排行榜
+## 评测结果
 
 > **Note：**
 > pass
