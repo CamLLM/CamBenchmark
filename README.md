@@ -24,26 +24,26 @@
 
 CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评估数据集：
 * 民航术语双语对齐(Alignment bilingual terminology)
-    * 对于 Embedding 模型，构建为__双语挖掘(BitextMining)__任务
-    * 对于 LLM，构建为**中英翻译(Translation)**任务
+    * 对于 Embedding 模型，构建为 双语挖掘(BitextMining) 任务
+    * 对于 LLM，构建为 中英翻译(Translation) 任务
 * 民航故障系统定位(Aircraft fault system location)
-    * 对于 Embedding 模型，利用“民航飞行器一级系统”向量重排(Rerank)构建为**分类(Classification)**任务
-    * 对于 LLM，利用 prompt 构建为**分类(Classification)**任务
+    * 对于 Embedding 模型，利用“民航飞行器一级系统”向量重排(Rerank)构建为 分类(Classification) 任务
+    * 对于 LLM，利用 prompt 构建为 分类(Classification) 任务
 * 民航文本系统章节定位(Aircraft text chapter location)
-    * 对于 Embedding 模型，利用“章节系统”向量重排(Rerank)构建为**聚类(Cluster)**任务
-    * 对于 LLM，构建为**文本分类(Classification)**任务
+    * 对于 Embedding 模型，利用“章节系统向量重排(Rerank)”构建为 聚类(Cluster) 任务
+    * 对于 LLM，构建为 文本分类(Classification) 任务
 * 民航维修知识问答(Civil aviation maintenance QA)
-    * 对于 Embedding 模型，分别构建为**文本检索()**和**文本重排()**任务
-    * 对于 LLM，构建为**问答()**任务
+    * 对于 Embedding 模型，分别构建为 文本检索(Retrieval) 和 文本重排(Rerank-text) 任务
+    * 对于 LLM，构建为 问答(maintenance QA) 任务
 * 民航维修执业资格及上岗考试(Civil aviation maintenance Multiple choice)
-    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
-    * 对于 LLM，构建为中英翻译(Translation)任务
+    * 对于 Embedding 模型，利用“选项向量重排(Rerank)”构建为重排(Rerank-choice)任务
+    * 对于 LLM，构建为选择题(Multiple-Choice)任务
 * 故障描述与FIM手册排故条目匹配(Fault description and FIM manual match)
-    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
-    * 对于 LLM，构建为中英翻译(Translation)任务
+    * 对于 Embedding 模型，构建为句对向量匹配(PairClass)任务
+    * 对于 LLM，构建为匹配(FIM Manual Match)任务
 * 民航排故树推理问答(Troubleshooting tree-structured QA)
-    * 对于 Embedding 模型，构建为双语挖掘(BitextMining)任务
-    * 对于 LLM，构建为中英翻译(Translation)任务
+    * 对于 Embedding 模型，利用“候选故障原因向量重排”构建为树节点重排(TroubleTree)任务
+    * 对于 LLM，构建为树结构溯因推理(Reasoning on Tree)任务
 
 ## 评测结果
 
