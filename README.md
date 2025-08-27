@@ -73,51 +73,48 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 * [chineseEnglishAligned](chineseEnglishAligned)
     * [bitextmine.xlsx](chineseEnglishAligned/bitextmine.xlsx)，[更多信息](chineseEnglishAligned/readme.md)
 
-    | Name                     | Size  | Mean(Task) |
-    |---|---|---|
-    | Conan-embedding-v1       | 326 M |          55.14 | 
+        <details>
+        <summary>数据展示</summary>
+        </details>
 
 * [classification](classification)
     * [classification.xlsx](classification/classification.xlsx)，[更多信息](classification/readme.md)
 
-    | Name                     | Size  | Mean(Task) |
-    |---|---|---|
-    | Conan-embedding-v1       | 326 M |          55.14 | 
+        <details>
+        <summary>数据展示</summary>
+        </details>
 
 * [cluster](cluster)
     * [cluster.xlsx](cluster/cluster.xlsx)，[更多信息](cluster/readme.md)
 
-    | Name                     | Size  | Mean(Task) |
-    |---|---|---|
-    | Conan-embedding-v1       | 326 M |          55.14 | 
+        <details>
+        <summary>数据展示</summary>
+        </details>
 
 * [pairclassification](pairclassification)
     * [paircls.xlsx](pairclassification/paircls.xlsx)，[更多信息](pairclassification/readme.md)
 
-    | Name                     | Size  | Mean(Task) |
-    |---|---|---|
-    | Conan-embedding-v1       | 326 M |          55.14 | 
+        <details>
+        <summary>数据展示</summary>
+        </details>
 
 * [multipleChoice](multipleChoice)
     * [air_choice.xlsx](multipleChoice/air_choice.xlsx)，[更多信息](multipleChoice/readme.md)
         <details>
-        <summary>trouble_tree数据展示</summary>
-        | Name                     | Size  | Mean(Task) |
-        |---|---|---|
-        | Conan-embedding-v1       | 326 M |          55.14 | 
+        <summary>数据展示</summary>
         </details>
 
-
-
 * [qa](qa)
-    * [queries.jsonl](qa/queries.jsonl), [corpus.jsonl](qa/corpus.jsonl)，用于Embedding模型的[文本检索(Retrieval)任务]()，[更多信息](qa/readme.md)
-    * [rerank_qa.xlsx](qa/rerank_qa.xlsx)，用于Embedding模型的[文本重排(Rerank-text)任务]()，[更多信息](qa/readme.md)
-    * [qa.xlsx](qa/qa.xlsx)，用于LLM模型的[问答(maintenance QA)任务]()，[更多信息](qa/readme.md)
-
+    * Embedding
+        * [queries.jsonl](qa/queries.jsonl), [corpus.jsonl](qa/corpus.jsonl)，用于[文本检索(Retrieval)任务]()，[数据展示及更多信息](qa/readme.md)
+        * [rerank_qa.xlsx](qa/rerank_qa.xlsx)，用于[文本重排(Rerank-text)任务]()，[数据展示及更多信息](qa/readme.md)
+    * LLM
+        * [qa.xlsx](qa/qa.xlsx)，用于[问答(maintenance QA)任务]()，[数据展示及更多信息](qa/readme.md)   
+       
 * [faultTree](faultTree)
     * [trouble_tree.jsonl](faultTree/trouble_tree.jsonl)，[更多信息](faultTree/readme.md)
         <details>
-        <summary>trouble_tree数据展示</summary>
+        <summary>数据展示</summary>
         
             {
                 "prompt": "## 历史推理路径\n- 1-1: 近期NG飞机经常在空中出现无线电高度指示不正常故障，地面却测试无线电高度表正常。并且由于无线电高度表故障，导致许多使用无线电高度信号的系统发生故障。以下是无线电高度表异常的相关的故障报告： 1.左右座无线电高度表指示偏差过大； 2.进近时候双通道自动驾驶不能衔接或者断开； 3.飞行指引杆不正常消失； 4.起飞后、进近阶段、复飞阶段不正常的构型警告； 5.音响高度报告功能失效； 6.速度刹车不在预位灯在自动速度刹车预位时不正常点亮； 自动油门慢车状态在FMA上不正常显示。 | 知识: 原理分析 无线电高度表收发机产生发射电波信号经过传输电缆发送到发射天线，发射天线把发射电波信号发送出去，遇到地面后反射；接收天线接收经地面反射的电波信号，并把接收到的电波信号反馈回无线电高度表收发机；无线电高度表收发机利用发送信号和接收信号的时间差来计算出飞机所在的无线电高度，并把解算出来的高度数据用总线形式发送给DEU和其他飞机各个系统，分别用来在PFD上显示无线电高度和用于其它各个系统的功能计算。无线电高度系统不正常会导致PFD上显示的无线电高度异常，而且还会导致其他利用无线电高度信号计算的系统发生故障。.造成无线电高度表故障的故障部件： 1.发射天线、接收天线（M1737/M1739/M1738/M1740） 2.线路故障：天线到收发机之间的同轴电缆、同轴电缆接头； 3.收发机（M1735/1736） 4.上述的故障部件的组合 ", 
