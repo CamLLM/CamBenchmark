@@ -100,10 +100,14 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 
 * [multipleChoice](multipleChoice)
     * [air_choice.xlsx](multipleChoice/air_choice.xlsx)，[更多信息](multipleChoice/readme.md)
+        <details>
+        <summary>trouble_tree数据展示</summary>
+        | Name                     | Size  | Mean(Task) |
+        |---|---|---|
+        | Conan-embedding-v1       | 326 M |          55.14 | 
+        </details>
 
-    | Name                     | Size  | Mean(Task) |
-    |---|---|---|
-    | Conan-embedding-v1       | 326 M |          55.14 | 
+
 
 * [qa](qa)
     * [queries.jsonl](qa/queries.jsonl), [corpus.jsonl](qa/corpus.jsonl)，用于Embedding模型的[文本检索(Retrieval)任务]()，[更多信息](qa/readme.md)
@@ -111,7 +115,7 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
     * [qa.xlsx](qa/qa.xlsx)，用于LLM模型的[问答(maintenance QA)任务]()，[更多信息](qa/readme.md)
 
 * [faultTree](faultTree)
-    * [trouble_tree.jsonl](faultTree/trouble_tree.jsonl)
+    * [trouble_tree.jsonl](faultTree/trouble_tree.jsonl)，[更多信息](faultTree/readme.md)
         <details>
         <summary>trouble_tree数据展示</summary>
         
