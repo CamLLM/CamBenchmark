@@ -32,15 +32,15 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 * 民航文本系统章节定位(Aircraft text chapter location)
     * Embedding，利用“章节系统向量重排(Rerank)”构建为聚类(Cluster)任务
     * LLM，构建为文本分类(Classification)任务
-* 民航维修知识问答(Civil aviation maintenance QA)
-    * Embedding，分别构建为文本检索(Retrieval)和文本重排(Rerank-text)任务
-    * LLM，构建为问答(maintenance QA)任务
-* 民航维修执业资格及上岗考试(Civil aviation maintenance Multiple choice)
-    * Embedding，利用“选项向量重排(Rerank)”构建为重排(Rerank-choice)任务
-    * LLM，构建为选择题(Multiple-Choice)任务
 * 故障描述与FIM手册排故条目匹配(Fault description and FIM manual match)
     * Embedding，利用句对向量，构建为匹配(PairClass)任务
     * LLM，构建为匹配(FIM Manual Match)任务
+* 民航维修执业资格及上岗考试(Civil aviation maintenance Multiple choice)
+    * Embedding，利用“选项向量重排(Rerank)”构建为重排(Rerank-choice)任务
+    * LLM，构建为选择题(Multiple-Choice)任务
+* 民航维修知识问答(Civil aviation maintenance QA)
+    * Embedding，分别构建为文本检索(Retrieval)和文本重排(Rerank-text)任务
+    * LLM，构建为问答(maintenance QA)任务
 * 民航排故树推理问答(Troubleshooting tree-structured QA)
     * Embedding，利用“候选故障原因向量重排”构建为树节点重排(TroubleTree)任务
     * LLM，构建为树结构溯因推理(Reasoning on Tree)任务
@@ -66,11 +66,48 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 
 
 ## 评估数据集
-除了此github项目，您也可以通过[Hugging Face]()或者[ModelScope]()获取我们的数据。
+除了此项目外，您也可以通过[Hugging Face]()或者[ModelScope]()获取我们的数据。
 
 #### 数据集说明
 
 * [chineseEnglishAligned](chineseEnglishAligned)
+    * [bitextmine.xlsx](chineseEnglishAligned/bitextmine.xlsx)
+
+    | Name                     | Size  | Mean(Task) |
+    |---|---|---|
+    | Conan-embedding-v1       | 326 M |          55.14 | 
+
+* [classification](classification)
+    * [classification.xlsx](classification/classification.xlsx)
+
+    | Name                     | Size  | Mean(Task) |
+    |---|---|---|
+    | Conan-embedding-v1       | 326 M |          55.14 | 
+
+* [cluster](cluster)
+    * [cluster.xlsx](cluster/cluster.xlsx)
+
+    | Name                     | Size  | Mean(Task) |
+    |---|---|---|
+    | Conan-embedding-v1       | 326 M |          55.14 | 
+
+* [pairclassification](pairclassification)
+    * [paircls.xlsx](pairclassification/paircls.xlsx)
+
+    | Name                     | Size  | Mean(Task) |
+    |---|---|---|
+    | Conan-embedding-v1       | 326 M |          55.14 | 
+
+* [multipleChoice](multipleChoice)
+    * [air_choice.xlsx](multipleChoice/air_choice.xlsx)
+
+    | Name                     | Size  | Mean(Task) |
+    |---|---|---|
+    | Conan-embedding-v1       | 326 M |          55.14 | 
+
+* [qa](qa)
+
+* [faultTree](faultTree)
 
 #### 数据格式
 pass。示例：
