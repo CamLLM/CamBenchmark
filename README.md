@@ -184,10 +184,19 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 
 请参考[paper]()的附录B(Prompts)部分
 
-#### 评估脚本
-pass
+#### 评估脚本及Pipeline
+> **Note：**
+> 各个任务在 Embedding 和 LLM 下的评估脚本，包括评估指标等，请分别查看对应目录对应模型类别的脚本，如 chineseEnglishAligned 任务 embedding 模型的 [bitextmine.py](chineseEnglishAligned/embedding/bitextmine.py)
 
-#### LLM-as-judger与人工评估一致性验证
+这里重点指出qa和faultTree任务，评估LLM，采用了LLM-as-judger，利用 gpt-4o 自动化评估
+* [qa-gpt-4o.py](qa/llm/qa-gpt-4o.py)
+* [tree-gpt-4o.py](faultTree/llm/tree-gpt-4o.py)
+
+我们对此做了LLM-as-judger与人工评估一致性的验证，发现与人工评估高度一致。
+<p align="center"> <img src="images/Consistency_1.png" style="width: 85%;" id="title-icon">       </p>
+<p align="center"> <img src="images/Consistency_2.png" style="width: 85%;" id="title-icon">       </p>
+
+最后我们还开源了自动流水线评估框架，只需通过配置yaml文件，实现流水线自动评估。[更多信息在此](utils/llm/pipeline/)。
 
 ## 贡献
 pass
