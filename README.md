@@ -1,4 +1,4 @@
-# CAMB---民用航空维修评估
+# CAMB---民用航空维修评估基准
 
 <h4 align="center">
     <p>
@@ -18,10 +18,16 @@
 
 民航维修领域，行业标准严苛，知识密集，典型的富含知识和推理的业务场景。我们结合民航维修领域的业务和对大模型的理解，建设并开源了一套民航维修领域工业级的大模型评测基准(Civil Aviation Maintenance Benchmark)，既可以评测向量嵌入模型(Embedding)，也可以评测大语言模型(LLM)，同时也在一定程度上弥补了目前大多仅在数学和代码领域研究大模型推理的评测短板。
 
-
-
 <p align="center"> <img src="images/camb.png" style="width: 85%;" id="title-icon">       </p>
 
+CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评估数据集：
+* 民航术语双语对齐(Alignment bilingual terminology)
+* 民航故障系统定位(Aircraft fault system location)
+* 民航文本系统章节定位(Aircraft text chapter location)
+* 民航维修知识问答(Civil aviation maintenance QA)
+* 民航维修执业资格及上岗考试(Civil aviation maintenance Multiple choice)
+* 故障描述与FIM手册排故条目匹配(Fault description and FIM manual match)
+* Troubleshooting tree-structured QA 
 
 ## 评测结果
 
