@@ -191,7 +191,7 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 我们在这里重点提及两点：
 1. 关于Embedding模型，它的加载方式多样，有Huggerface/ModelScope的Transformer、SentenceTransformer、vllm等，结合官方给出的参考以及我们的多次实验，最终选择能稳定实现最好性能的加载方式，并封装了[统一加载Embedding模型的工具包](utils/embedding/get_model_embedding.py)
 
-2. 在这里，重点指出qa和faultTree任务，评估LLM，采用了LLM-as-judger，利用 gpt-4o 自动化评估
+2. 关于评估LLM，重点指出qa和faultTree任务，采用了LLM-as-judger，利用 gpt-4o 自动化评估
 * [qa-gpt-4o.py](qa/llm/qa-gpt-4o.py)
 * [tree-gpt-4o.py](faultTree/llm/tree-gpt-4o.py)
 
