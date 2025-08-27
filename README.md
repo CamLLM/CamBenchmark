@@ -71,44 +71,44 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 #### 数据集说明
 
 * [chineseEnglishAligned](chineseEnglishAligned)
-    * [bitextmine.xlsx](chineseEnglishAligned/bitextmine.xlsx)
+    * [bitextmine.xlsx](chineseEnglishAligned/bitextmine.xlsx)，[更多信息](chineseEnglishAligned/readme.md)
 
     | Name                     | Size  | Mean(Task) |
     |---|---|---|
     | Conan-embedding-v1       | 326 M |          55.14 | 
 
 * [classification](classification)
-    * [classification.xlsx](classification/classification.xlsx)
+    * [classification.xlsx](classification/classification.xlsx)，[更多信息](classification/readme.md)
 
     | Name                     | Size  | Mean(Task) |
     |---|---|---|
     | Conan-embedding-v1       | 326 M |          55.14 | 
 
 * [cluster](cluster)
-    * [cluster.xlsx](cluster/cluster.xlsx)
+    * [cluster.xlsx](cluster/cluster.xlsx)，[更多信息](cluster/readme.md)
 
     | Name                     | Size  | Mean(Task) |
     |---|---|---|
     | Conan-embedding-v1       | 326 M |          55.14 | 
 
 * [pairclassification](pairclassification)
-    * [paircls.xlsx](pairclassification/paircls.xlsx)
+    * [paircls.xlsx](pairclassification/paircls.xlsx)，[更多信息](pairclassification/readme.md)
 
     | Name                     | Size  | Mean(Task) |
     |---|---|---|
     | Conan-embedding-v1       | 326 M |          55.14 | 
 
 * [multipleChoice](multipleChoice)
-    * [air_choice.xlsx](multipleChoice/air_choice.xlsx)
+    * [air_choice.xlsx](multipleChoice/air_choice.xlsx)，[更多信息](multipleChoice/readme.md)
 
     | Name                     | Size  | Mean(Task) |
     |---|---|---|
     | Conan-embedding-v1       | 326 M |          55.14 | 
 
 * [qa](qa)
-    * [queries.jsonl](qa/queries.jsonl), [corpus.jsonl](qa/corpus.jsonl)
-    * [rerank_qa.xlsx](qa/rerank_qa.xlsx)
-    * [qa.xlsx](qa/qa.xlsx)
+    * [queries.jsonl](qa/queries.jsonl), [corpus.jsonl](qa/corpus.jsonl)，用于Embedding模型的[文本检索(Retrieval)任务]()，[更多信息](qa/readme.md)
+    * [rerank_qa.xlsx](qa/rerank_qa.xlsx)，用于Embedding模型的[文本重排(Rerank-text)任务]()，[更多信息](qa/readme.md)
+    * [qa.xlsx](qa/qa.xlsx)，用于LLM模型的[问答(maintenance QA)任务]()，[更多信息](qa/readme.md)
 
 * [faultTree](faultTree)
     * [trouble_tree.jsonl](faultTree/trouble_tree.jsonl)
@@ -122,13 +122,6 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
             }
             
         </details>
-
-#### 数据格式
-pass。示例：
-
-```
-
-```
 
 #### 提示词(prompt)
 pass
