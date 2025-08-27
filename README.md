@@ -24,7 +24,7 @@
 
 CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评估数据集：
 * 民航术语双语对齐(Alignment bilingual terminology)
-    * 对于 Embedding 模型，构建为**双语挖掘(BitextMining)**任务
+    * 对于 Embedding 模型，构建为__双语挖掘(BitextMining)__任务
     * 对于 LLM，构建为**中英翻译(Translation)**任务
 * 民航故障系统定位(Aircraft fault system location)
     * 对于 Embedding 模型，利用“民航飞行器一级系统”向量重排(Rerank)构建为**分类(Classification)**任务
