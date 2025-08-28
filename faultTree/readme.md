@@ -13,7 +13,8 @@
 如果检索到的节点有一条在Gold_list，则标记为1；否则，标记为0。最终评估使用准确率进行。
 
 ### 结果分析
-![image]images/Fault-tree-analy.png
+![image](images/Fault-tree-analy.png)
+
 图文[结果分析](embedding/analysis.py)
 
 ## LLM
