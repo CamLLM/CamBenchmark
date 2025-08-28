@@ -26,13 +26,9 @@ $P_{\text{all wrong}} \uparrow \quad\Rightarrow\quad \text{难度} \uparrow $
 #### 情形二：不完全错误（至少答对一个节点）
 - **事件定义**：模型在 \(C\) 个节点上答对，至少 \(C \ge 1\)。
 - **概率公式**：
-$$
-P_{\text{at least one correct}} = \frac{\displaystyle \binom{H - A}{A - C} \binom{A}{C}}{\displaystyle \binom{H}{A}}
-$$
+$P_{\text{at least one correct}} = \frac{\displaystyle \binom{H - A}{A - C} \binom{A}{C}}{\displaystyle \binom{H}{A}}$
 - **难度解释**：
-$$
-P_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \downarrow 
-$$
+$P_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \downarrow $
 #### 符号说明 
 | 符号 | 含义 |
 |---|---|
