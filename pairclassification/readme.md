@@ -10,6 +10,7 @@
 使用F1进行评估
 ### 模型效率
 鉴于句子配对任务易复现且数据量合适，我们使用句子配对任务对模型的效率进行了测评，Conan-embedding-v1在性能和速度之间保持了平衡。
+![image](https://github.com/CamBenchmark/cambenchmark/blob/4a62de338325a32546fe2aa1d087c602a42a428f/images/pcls_model_effi.png)
 
 
 
