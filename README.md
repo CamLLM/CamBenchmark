@@ -9,8 +9,8 @@
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 📄 <a href="" target="_blank" style="margin-right: 15px; margin-left: 10px">论文</a> • 
-🏆 <a href="" target="_blank"  style="margin-left: 10px">评测结果</a> •
-🤗 <a href="" target="_blank" style="margin-left: 10px">数据集</a> 
+🏆 <a href="#评测结果" target="_blank"  style="margin-left: 10px">评测结果</a> •
+🤗 <a href="#评估数据集" target="_blank" style="margin-left: 10px">数据集</a> 
 </p>
 
 
