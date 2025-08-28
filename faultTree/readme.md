@@ -40,10 +40,7 @@ $P_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \d
 在第二维度上，Qwen3-8B = Qwen3-4B > gte-7B > gte-large-zh > gte-1.5B  
 在第三维度上，答对条数一致比较才有意义，由于答对条数为1的数目占大头，因此对模型答对条数为1进行分析，Qwen3-8B > Qwen3-4B > gte-1.5B= gte-large-zh > gte-7B  
 总体而言，Qwen3-8B > Qwen3-4B > gte-7B > gte-large-zh > gte-1.5B-instruct。  
-
-
-<p align="center"> <img src="images/Fault-tree-analy.png" style="width: 85%;" id="title-icon">       </p>
-
+![image](https://github.com/CamBenchmark/cambenchmark/blob/483d8868ad1d9082a082f1b37f3bc456b18bd77c/images/Fault-tree-analy.png)
 
 ## LLM
 pass
