@@ -10,9 +10,9 @@
 ### 评估
 两个任务的评估指标都为ndcg@10。
 ### Qwen3-8B和Qwen3-4B结果分析
-在Retrieval阶段，Qwen3-8B比Qwen3-4B低4%，但在Reranker-text阶段，Qwen3-8B比Qwen3-4B高8%
+**1.在Retrieval阶段，Qwen3-8B比Qwen3-4B低4%，但在Reranker-text阶段，Qwen3-8B比Qwen3-4B高8%**
 ![image](https://github.com/CamBenchmark/cambenchmark/blob/9772f515592d3253da91c44cd37ebfa04a9844de/images/retrieavl_ana2.png)
-Qwen3-8B比Qwen3-4B更激进
+**2.Qwen3-8B比Qwen3-4B更激进**
 ![image](https://github.com/CamBenchmark/cambenchmark/blob/e0b2148cd4d51a00367e6f04970111858994dabb/images/retrieval_ana1.png)
 ## LLM
 pass
