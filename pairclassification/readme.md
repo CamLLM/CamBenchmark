@@ -1,7 +1,15 @@
 # 故障描述与FIM手册排故条目匹配(Fault description and FIM manual match)
 
 ## Embedding
-pass
+### 任务构建
+
+### 数据构建
+我们从FIM手册中选取故障问题和对该故障问题的详细描述，形成文本对。又从FIM手册的第49章中选取故障问题和该故障问题对应的条目名称（条目是指记录飞机故障的详细报告，用于维护分析和安全改进。），形成文本对。而后将两个文本对进行总和，形成正样本文本对。对于负样本文本对，我们使用BGE-large-v1.5，gte-Qwen2-1.5B-instruct,gte-Qwen2-7B-instruct，Qwen3-Embedding-4B,Qwen3-Embedding-8B平分正样本集，对于每一个故障问题，使用模型选取除对应的描述或条目名称之外与其相似度前3的描述或条目。最后，我们将正负样本构造成句子配对数据集，正负样本比为1：3，用于Fault description and FIM manual Match任务。
+
+
+
+### 评估
+
 
 ## LLM
 pass
