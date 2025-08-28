@@ -8,6 +8,11 @@
 ![image](https://github.com/CamBenchmark/cambenchmark/blob/0727e4fcf0f3a175bb6e745ea3f3f1fb96b304db/images/pcls_datasets.png)
 ### 评估
 使用F1进行评估
+### 模型效率
+鉴于句子配对任务易复现且数据量合适，我们使用句子配对任务对模型的效率进行了测评，Conan-embedding-v1在性能和速度之间保持了平衡。
+
+
+
 
 ## LLM
 pass
