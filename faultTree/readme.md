@@ -35,6 +35,7 @@ $P_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \d
 | \(H\) | 题库总题数 |
 | \(A\) | 被考察的节点数 |
 | \(C\) | 模型实际答对的节点数 |
+
 在第一维度上，gte-large-zh、gte-1.5B、gte-7B、Qwen3-4B和Qwen3-8B表现最佳，分别正确回答了14、13、15、15、16个问题。五个模型之间的差异小于3，表明水平一致，因此进行了第二维度的评估。  
 在第二维度上，Qwen3-8B = Qwen3-4B > gte-7B > gte-large-zh > gte-1.5B  
 在第三维度上，答对条数一致比较才有意义，由于答对条数为1的数目占大头，因此对模型答对条数为1进行分析，Qwen3-8B > Qwen3-4B > gte-1.5B= gte-large-zh > gte-7B  
