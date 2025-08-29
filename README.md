@@ -8,7 +8,7 @@
 </h4>
 
 <p align="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-📄 <a href="" target="_blank" style="margin-right: 15px; margin-left: 10px">论文</a> • 
+📄 <a href="https://www.arxiv.org/abs/2508.20420" target="_blank" style="margin-right: 15px; margin-left: 10px">论文</a> • 
 🏆 <a href="#评测结果" target="_blank"  style="margin-left: 10px">评测结果</a> •
 🤗 <a href="#评估数据集" target="_blank" style="margin-left: 10px">数据集</a> 
 </p>
@@ -182,7 +182,7 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 
 ### 提示词(prompt)
 
-请参考[paper的附录B(Prompts)]()部分
+请参考[paper的附录B(Prompts)](https://www.arxiv.org/abs/2508.20420)部分
 
 ### 评估脚本及Pipeline
 > **Note：**
@@ -207,7 +207,15 @@ CAMB评测基准涵盖民航维修场景中的 7 个任务，涉及到 8 个评�
 ## 引用
 
 ```
-
+@misc{zhang2025cambcomprehensiveindustrialllm,
+      title={CAMB: A comprehensive industrial LLM benchmark on civil aviation maintenance}, 
+      author={Feng Zhang and Chengjie Pang and Yuehan Zhang and Chenyu Luo},
+      year={2025},
+      eprint={2508.20420},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2508.20420}, 
+}
 ```
 ## 许可证
 
