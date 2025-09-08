@@ -1,46 +1,92 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # 民航排故树推理问答(Troubleshooting tree-structured QA)
 
 ## Embedding
 
 ### 任务构建
-对于embeddings，该任务为检索任务，旨在考察模型能否召回可能解决飞机故障的相应措施的能力。其中飞机故障为节点，解决措施为其子节点。
+
+对于 embeddings，该任务为检索任务，旨在考察模型能否召回可能解决飞机故障的相应措施的能力。其中飞机故障为节点，解决措施为其子节点。
+
 ### 数据构建
-原始数据格式为<Query-Gold_list>,由于Query可能和其他的Gold_list内容部分重合，因此我们进行两步去重，以此得到候选集：  
-1.将所有的Gold_list的节点进行去重，得到节点集  
-2.对于每一条Query，其都要和节点集进行去重，得到最终的候选节点集。  
-对于每一条Query，模型在候选节点集中召回和Gold_list相同数量的节点个数。
+
+原始数据格式为<Query-Gold_list>,由于 Query 可能和其他的 Gold_list 内容部分重合，因此我们进行两步去重，以此得到候选集：  
+1.将所有的 Gold_list 的节点进行去重，得到节点集  
+2.对于每一条 Query，其都要和节点集进行去重，得到最终的候选节点集。  
+对于每一条 Query，模型在候选节点集中召回和 Gold_list 相同数量的节点个数。
+
 ### 评估
-如果检索到的节点有一条在Gold_list，则标记为1；否则，标记为0。最终评估使用准确率进行。
+
+如果检索到的节点有一条在 Gold_list，则标记为 1；否则，标记为 0。最终评估使用准确率进行。
+
 ### 结果分析
+
 为了更稳健地评估模型的结果，从三个维度进行评估，优先级从（1）到（3）：  
 （1）完全错误的问题越少越好；  
 （2）在完全错误的问题中，简单的越少越好；  
-（3）在不完全错误的问题中，难度越高的越好。  
-#### 难度评级 
+（3）在不完全错误的问题中，难度越高的越好。
+
+#### 难度评级
+
 #### 情形一：完全错误（所有节点全错）
+
 - **事件定义**：模型在所有节点上均未能答对。
 - **概率公式**：
-$P_{\text{all wrong}} = \frac{\displaystyle \binom{H - A}{A}}{\displaystyle \binom{H}{A}}$
+  $P_{\text{all wrong}} = \frac{\displaystyle \binom{H - A}{A}}{\displaystyle \binom{H}{A}}$
 - **难度解释**：
-$P_{\text{all wrong}} \uparrow \quad\Rightarrow\quad \text{难度} \uparrow $
+  $P\_{\text{all wrong}} \uparrow \quad\Rightarrow\quad \text{难度} \uparrow $
+
 #### 情形二：不完全错误（至少答对一个节点）
+
 - **事件定义**：模型在 \(C\) 个节点上答对。
 - **概率公式**：
-$P_{\text{at least one correct}} = \frac{\displaystyle \binom{H - A}{A - C} \binom{A}{C}}{\displaystyle \binom{H}{A}}$
+  $P_{\text{at least one correct}} = \frac{\displaystyle \binom{H - A}{A - C} \binom{A}{C}}{\displaystyle \binom{H}{A}}$
 - **难度解释**：
-$P_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \downarrow $
-#### 符号说明 
-| 符号 | 含义 |
-|---|---|
-| \(H\) | 题库总题数 |
-| \(A\) | 被考察的节点数 |
+  $P\_{\text{at least one correct}} \uparrow \quad\Rightarrow\quad \text{难度} \downarrow $
+
+#### 符号说明
+
+| 符号  | 含义                 |
+| ----- | -------------------- |
+| \(H\) | 题库总题数           |
+| \(A\) | 被考察的节点数       |
 | \(C\) | 模型实际答对的节点数 |
 
-在第一维度上，gte-large-zh、gte-1.5B、gte-7B、Qwen3-4B和Qwen3-8B表现最佳，分别正确回答了14、13、15、15、16个问题。五个模型之间的差异小于3，表明水平一致，因此进行了第二维度的评估。  
+在第一维度上，gte-large-zh、gte-1.5B、gte-7B、Qwen3-4B 和 Qwen3-8B 表现最佳，分别正确回答了 14、13、15、15、16 个问题。五个模型之间的差异小于 3，表明水平一致，因此进行了第二维度的评估。  
 在第二维度上，Qwen3-8B = Qwen3-4B > gte-7B > gte-large-zh > gte-1.5B  
-在第三维度上，答对条数一致比较才有意义，由于答对条数为1的数目占大头，因此对模型答对条数为1进行分析，Qwen3-8B > Qwen3-4B > gte-1.5B= gte-large-zh > gte-7B  
+在第三维度上，答对条数一致比较才有意义，由于答对条数为 1 的数目占大头，因此对模型答对条数为 1 进行分析，Qwen3-8B > Qwen3-4B > gte-1.5B= gte-large-zh > gte-7B  
 总体而言，Qwen3-8B > Qwen3-4B > gte-7B > gte-large-zh > gte-1.5B-instruct。  
 ![image](https://github.com/CamBenchmark/cambenchmark/blob/483d8868ad1d9082a082f1b37f3bc456b18bd77c/images/Fault-tree-analy.png)
 
 ## LLM
-pass
+
+### 用于检验大模型推理能力的民航排故树推理问答(Troubleshooting tree-structured QA)数据构建流程
+
+排故树采用层级化的树状结构来表示完整的故障诊断流程。根节点描述故障现象，中间节点表示可能的原因或子原因，叶节点为最终确定的根本原因。每个节点包含唯一的层级编号（如 1-1 表示第一层第一个节点）和详细描述（包括相关知识和检查证据等）。数据构建首先通过标准化的 prompt 模板引导大模型根据排故真实案例生成初始的排故树结构，然后进行人工校验以确保数据质量。
+
+### 任务构建
+
+#### 推理任务设计
+
+基于构建好的故障树，系统将每一层拆分为独立的推理子任务。对于每个推理层级，提供之前所有层级的推理过程作为上下文，让模型推理下一层可能的节点。以发动机启动中止故障为例，故障树从根节点的现象描述开始，逐层深入分析可能原因。从最初的"N2 不上升、EGT 不上升、跳开关跳出"现象，中间层通过系统性的检查和测试及测试结果反馈，最终定位到导线破损短接的具体故障点。
+
+### 评估方法
+
+采用两级评估机制：
+
+#### 1. 内容覆盖判断
+
+- 使用 GPT-4o 作为评估模型，判断生成答案是否基本涵盖参考答案的核心内容
+- 二分类评估：覆盖为 1，不覆盖为 0
+- 通过 prompt 工程并与人工评估结果核对确保评估的客观性和一致性
+- 最终指标为正确数/总样本数$\times 100$
+
+#### 2. 具体覆盖点识别
+
+- 识别生成答案中涵盖参考答案的具体条目序号
+- 输出格式：具体序号（如"2,3,5"）或"无"
+- 当内容覆盖得分相似时，为细粒度分析提供量化依据
